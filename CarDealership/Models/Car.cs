@@ -2,19 +2,13 @@ namespace CarDealership.Models
 {
   public class Car
   {
-    // public string Recipient { get; set; }
-    // public string Sender { get; set; }
+    public string Make { get; set; }
+    public string Model { get; set; }
 
-    // public string Location1 { get; set; }
-
-    // public string Location2 { get; set; }
-
-    // public string Location3 { get; set; }
-
-    // public string Souvenir1 { get; set; }
-
-    // public string Souvenir2 { get; set; }
-
-    // public string Souvenir3 { get; set; }
+    public Car(string make, string model)
+    {
+      Make = make;
+      Model = model;
+    }
   }
 }
