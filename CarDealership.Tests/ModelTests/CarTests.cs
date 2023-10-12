@@ -1,11 +1,18 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using CarDealership.Models;
+using System.Collections.Generic;
+using System;
 
 namespace CarDealership.Tests
 {
   [TestClass]
-  public class CarTests
+  public class CarTests : IDisposable
   {
+
+    public void Dispose()
+    {
+      Car.ClearAll();
+    }
 
     [TestMethod]
     public void CarConstructor_CreatesInstanceOfCar_Car()
@@ -52,6 +59,28 @@ namespace CarDealership.Tests
       newCar.Model = updatedModel;
       string result = newCar.Model;
       Assert.AreEqual(updatedModel, result);
+    }
+
+    [TestMethod]
+    public void GetAll_ReturnsEmptyList_CarList()
+    {
+      List<Car> newList = new List<Car> { };
+      List<Car> result = Car.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
+
+    [TestMethod]
+    public void GetAll_ReturnsCars_CarList()
+    {
+      string make01 = "honda";
+      string make02 = "kia";
+      string model01 = "element";
+      string model02 = "nero";
+      Car newCar1 = new Car(make01, model01);
+      Car newCar2 = new Car(make02, model02);
+      List<Car> newList = new List<Car> { newCar1, newCar2 };
+      List<Car> result = Car.GetAll();
+      CollectionAssert.AreEqual(newList, result);
     }
   }
 }
