@@ -1,6 +1,6 @@
-# (Application Name)
+# Car Dealership
 
-#### (Brief description of application)
+#### A website for a car dealership.
 
 #### By Aidan Williams
 
@@ -11,6 +11,8 @@
 * _MSTest_
 
 ## Description
+
+A website where users can add cars to a viewable list.
 
 ## Setup Instructions
 
