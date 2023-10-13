@@ -18,8 +18,9 @@ A website where users can add cars to a viewable list.
 
 1. Clone this repo.
 2. Open your terminal (e.g., Terminal or GitBash) and navigate to this project's production directory.
-3. In the command line, run the command "dotnet run" to compile and execute the console application. Since this is a console application, you'll interact with it through text commands in your terminal.
-4. Optionally, you can run "dotnet build" to compile this console app without running it.
+3. Run `dotnet run` in the command line.
+4. Visit https://localhost:5001/ in your web browser.
+5. Optionally, you can run `dotnet build` to compile this website without running a local server.
 
 ### How to Run Tests
 
